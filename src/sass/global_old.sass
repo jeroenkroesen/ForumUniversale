@@ -1,0 +1,193 @@
+/* Sass stuff like variables and mixins  */
+@use 'colors'
+
+/* Text */
+$header-h-font-fam: 'KoHo', cursive
+
+@mixin large-title()
+    font-size: 5rem
+    font-family: $header-h-font-fam
+/******************************************************************************/
+
+a:hover
+    text-decoration: underline
+
+textarea
+    margin-bottom: 1rem
+
+
+html
+    /* Needed for sticky footer */
+    position: relative
+    min-height: 100%
+
+body
+    /* Margin bottom by footer height */
+    margin-bottom: 60px
+
+.btn
+    /* Orange Button on white background */
+    border: 1px solid colors.$dark-blue-background
+    border-radius: 6px
+    padding: .50rem
+    background: colors.$accent-green
+    color: colors.$dark-blue-background
+
+.btn:hover
+    /* Orange for white bckgrnd becomes Maroon and white text */
+    cursor: pointer
+    background: Maroon
+    color: White
+
+button.close-small
+    background: #EFF1F3
+    color: Black
+    border: none
+    padding: 0
+    font-weight: 700
+    line-height: 1
+    cursor: pointer
+
+button.close-big
+    background: White
+    color: Black
+    border: none
+    padding: 0
+    font-size: 1.5rem
+    font-weight: 700
+    line-height: 1
+    cursor: pointer
+
+a.buttonlink
+    /* display link as button */
+    display: inline-block
+    margin-bottom: .5rem
+    border-radius: 6px
+    padding: .50rem
+
+a.buttonlink:hover
+    cursor: pointer
+    text-decoration: none
+
+a.link-small
+    font-size: .8rem
+
+a.white
+    color: White
+
+a.black
+    color: Black
+
+a.spacedLink
+    margin-right: 1rem
+
+button.btn-orange, a.btn-orange
+    /* Orange Button on white background */
+    border: 1px solid Maroon
+    background: DarkOrange
+    color: Black
+
+button.btn-orange:hover, a.btn-orange:hover
+    /* Btn Orange on white bckgrnd becomes Maroon with white text */
+    cursor: pointer
+    background: Maroon
+    color: White
+
+button.btn-maroon, a.btn-maroon
+    /* Maroon button on DarkOrange background, white text */
+    border: 1px solid Maroon
+    color: White
+    background: Maroon
+
+button.btn-maroon:hover, a.btn-maroon:hover
+    /* btn Maroon on DarkOrange bckgrnd becomes Orange with Maroon text */
+    cursor: pointer
+    background: Orange
+    color: Maroon
+    border: 1px solid Maroon
+
+
+
+/*****************************-- Header Styles --****************************/
+header
+    display: flex
+    padding: 2rem
+    padding-top: 1rem
+    text-align: center
+    background: colors.$dark-blue-background
+    color: colors.$thin-accents
+    h1
+        @include large-title
+    h3
+        font-size: 1.5rem
+        font-style: italic
+        font-family: $header-h-font-fam
+    span#knowledge
+        color: colors.$accent-green
+    span#connected
+        color: colors.$green-turquoise
+    img
+        height: 3.6rem
+        width: 3.6rem
+
+
+/*****************************-- Navbar Styles --******************************/
+nav#main-menu
+    position: -webkit-sticky /* Safari */
+    position: sticky
+    top: 0
+    display: flex
+    align-items: center
+    height: 3.7rem
+    background: colors.$dark-blue-background
+    font-weight: bold
+    z-index: 5 /* Always stay on top */
+    a
+        color: colors.$thin-accents
+        padding: 1rem
+        height: 100%
+    a:hover
+        background: colors.$thin-accents
+        color: colors.$dark-blue-background
+        text-decoration: none
+    form
+        /* Align the form to the right with flex instead of float */
+        margin-left: auto
+        margin-right: 1rem
+        display: flex
+        input[type="text"]
+            display: inline-flex
+            border: none
+            border-bottom: 1px solid colors.$thin-accents
+            background: colors.$dark-blue-background
+            color: colors.$thin-accents
+        input::placeholder
+            color: colors.$thin-accents
+        input[type="text"]:focus
+            border-bottom: 1px solid colors.$thin-accents
+            background: colors.$lighter-blue-background
+            outline: none
+            color: colors.$thin-accents
+        button
+            display: inline-flex
+            justify-content: center
+            align-items: center
+            height: 100%
+            padding: .50rem
+            border: 1px solid colors.$dark-blue-background
+            border-bottom: 1px solid colors.$thin-accents
+            border-left: none
+            background: colors.$dark-blue-background
+            color: colors.$thin-accents
+
+footer
+    background: colors.$light-background
+    position: absolute
+    bottom: 0
+    width: 100%
+    height: 60px /* Set the fixed height of the footer here */
+    line-height: 60px /* Vertically center the text there */
+
+footer p
+    display: inline
+    margin-left: 15px

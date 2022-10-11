@@ -1,0 +1,37 @@
+@use 'colors'
+
+$header-h-font-fam: 'KoHo', cursive
+
+section
+    padding: 1.1vh
+    font-family: $header-h-font-fam
+
+section#home-section01
+    padding: 1.1vh
+    padding-top: 7vh
+    padding-bottom: 7vh
+    text-align: center
+    /*background: linear-gradient(to bottom, colors.$dark-blue-background, 85%, colors.$medium-background) */
+    background: colors.$dark-blue-background
+    color: colors.$accent-gold
+    h1
+        font-family: $header-h-font-fam
+        font-size: 9vw
+        font-weight: 1000
+        span#connected
+            color: colors.$green-turquoise
+            font-style: italic
+    p
+        color: colors.$text-pale-blue
+        font-weight: bold
+
+section#home-section02
+    background: colors.$medium-background
+    color: colors.$text-dark
+    padding-top: 4vh
+    padding-bottom: 4vh
+    h1
+        font-weight: 1000
+        font-size: 8vw
+        span#curiosity
+            color: colors.$accent-red

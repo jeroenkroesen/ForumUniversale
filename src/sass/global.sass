@@ -1,0 +1,39 @@
+/* Sass stuff like variables and mixins  */
+@use 'colors'
+
+$header-h-font-fam: 'KoHo', cursive
+
+/* sticky footer */
+html
+    height: 100%
+body
+    display: flex
+    flex-direction: column
+    height: 100vh
+main
+    flex: 1 0 auto
+footer
+    flex-shrink: 0
+
+
+nav#topbar
+    position: sticky
+    top: 0
+    display: flex
+    justify-content: space-between
+    z-index: 5 /* Always stay on top */
+    height: 8vh
+    padding: 1.1vh
+    padding-left: 1.3vh
+    background: colors.$dark-blue-background
+    color: colors.$text-pale-blue
+    a
+        display: flex
+        width: 6vh
+    span
+        display: flex
+
+footer
+    padding: 1.1vh
+    font-size: .75rem
+    font-family: $header-h-font-fam

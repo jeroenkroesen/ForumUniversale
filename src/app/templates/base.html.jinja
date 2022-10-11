@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ language }}">
+
+<head>
+    {% block html_head %}
+    <meta charset="{{ charset }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Forum Universale{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-reboot.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    {% block css_extra_include %}
+    {% endblock css_extra_include %}
+    {% endblock html_head %}
+</head>
+
+<body>
+
+{% block navigation %}
+<nav id="topbar">
+    <a href="{{ url_for('pages.homepage') }}">
+        <img src="{{ url_for('static', filename='images/einstein02-pale-blue.png') }}" id="page-header-logo">
+    </a>
+    <span class="material-icons">menu</span>
+</nav>
+{% endblock %}
+
+{% block main %}{% endblock %}
+
+{% block footer %}
+<footer>
+    <p>Copyright 2022 - Bram van Laarhoven</p>
+</footer>
+{% endblock %}
+
+</body>

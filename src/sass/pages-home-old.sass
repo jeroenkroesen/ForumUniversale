@@ -1,0 +1,153 @@
+/* pages-home.css
+ * New Artumis design. Copyright 2018 Jeroen Kroesen.
+ * This stylesheet assumes bootstrap-reboot.css v4.1.3 is loaded
+ *
+ *
+ * Styles for the homepage. Loaded only on controller=pages&action=home
+ */
+
+
+@use 'colors'
+
+
+
+/******************************************************************************/
+/*                        -- Homepage Element styles --                       */
+/******************************************************************************/
+section
+    padding: 2rem
+    min-height: 35rem
+/******************************************************************************/
+/******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/*                       -- Homepage Component styles --                      */
+/******************************************************************************/
+div.home-txtcontainer
+    display: flex
+    justify-content: space-between
+
+div.home-imagecontainer
+    margin-left: 2rem
+
+div.home-imagecontainer img
+    height: auto
+    width: 100%
+
+section#home-section01
+    background: colors.$light-background
+
+section#home-section01 h1
+    font-size: 2.5rem
+    color: colors.$text-dark
+    margin-bottom: 3rem
+    text-align: center
+
+section#home-section01 p
+    width: 49%
+    font-size: 1.5rem
+
+section#home-section02
+    background: colors.$dark-background
+
+section#home-section02 h1
+    font-size: 2.5rem
+    margin-bottom: 3rem
+    color: Black
+
+section#home-section02 p
+    width: 60%
+    font-size: 1.5rem
+    margin-left: 2rem
+
+section#home-section03
+    background: colors.$light-background
+
+section#home-section03 h1
+    font-size: 2.5rem
+    color: Black
+    margin-bottom: 3rem
+    text-align: center
+
+section#home-section03 p
+    width: 60%
+    font-size: 1.5rem
+    color: Black
+
+section#home-section04
+    background: colors.$dark-background
+
+section#home-section04 h1
+    font-size: 2.5rem
+    margin-bottom: 3rem
+    text-align: center
+    color: Black
+
+section#home-section04 p
+    font-size: 1.5rem
+    text-align: center
+    width: 50%
+
+section#home-section05
+    background: colors.$dark-blue-background
+
+section#home-section05 h1
+    font-size: 2.5rem
+    margin-bottom: 3rem
+    text-align: center
+    color: colors.$thin-accents
+
+section#home-section05 p
+    font-size: 1.5rem
+    text-align: left
+    width: 50%
+    color: colors.$thin-accents
+
+section#home-section05 div#homepage-menu
+    width: 45%
+    padding: 1rem
+    background: DarkOrange
+    display: block !important
+
+div#homepage-menu-search
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    margin-bottom: 2rem
+
+div#homepage-menu-search button
+    background: Maroon
+    color: White
+
+div#homepage-menu-search button:hover
+    background: Orange
+    color: Maroon
+
+div#homepage-menu-buttons
+    display: flex
+    justify-content: space-between
+
+div#homepage-menu-buttons div
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 40%
+    text-align: center
+
+div#homepage-menu-buttons a
+    background: Maroon
+    color: White
+
+div#homepage-menu-buttons a:hover
+    background: Orange
+    color: Maroon
+
+div#modalContainer
+    display: block /* We're showing the message */
+/******************************************************************************/
+/******************************************************************************/

@@ -1,0 +1,48 @@
+/* Colors  */
+/* Sass stuff like variables and mixins  */
+/* sticky footer */
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+nav#topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+  height: 8vh;
+  padding: 1.1vh;
+  padding-left: 1.3vh;
+  background: #081521;
+  color: #869ba9;
+}
+nav#topbar a {
+  display: flex;
+  width: 6vh;
+}
+nav#topbar span {
+  display: flex;
+}
+
+footer {
+  padding: 1.1vh;
+  font-size: 0.75rem;
+  font-family: "KoHo", cursive;
+}
+
+/*# sourceMappingURL=global.css.map */
